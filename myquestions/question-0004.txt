@@ -1,4 +1,4 @@
-Problema: Evaluación del Área Bajo la Curva Precisión-Recall (PR-AUC) con Validación Cruzada y Balance de Clases
+Problema 0004: Evaluación del Área Bajo la Curva Precisión-Recall (PR-AUC) con Validación Cruzada y Balance de Clases
 
 Contexto 
 
