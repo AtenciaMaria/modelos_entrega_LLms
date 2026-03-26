@@ -1,0 +1,23 @@
+Problema: Evaluación del Área Bajo la Curva Precisión-Recall (PR-AUC) con Validación Cruzada y Balance de Clases
+
+Contexto 
+
+    En problemas de clasificación con clases desbalanceadas, el área bajo la curva de precisión-recall (PR-AUC) es una métrica más informativa que el ROC-AUC. Además, para mejorar la capacidad del modelo de detectar la clase minoritaria, se puede asignar un peso balanceado a las clases durante el entrenamiento. Tu tarea es implementar una función que calcule el PR-AUC promedio mediante validación cruzada, utilizando un modelo de regresión logística con class_weight='balanced'.
+
+Tu misión
+
+    Escribe una función en Python, calcular_pr_auc_cv(df, target_col, cv_folds=5), que realice los siguientes pasos:
+
+
+    1. Separe la matriz de características X (todas las columnas excepto target_col) y el vector objetivo y (la columna target_col) a partir del DataFrame df.
+
+    2. Escale las características de X usando StandardScaler de sklearn para que todas tengan media 0 y desviación estándar 1.
+
+    3. Instancie un modelo LogisticRegression con class_weight='balanced', max_iter=1000 y random_state=42.
+
+    4. Utilice cross_val_score con el modelo, los datos escalados, cv=cv_folds y scoring='average_precision' para obtener las puntuaciones PR-AUC en cada fold.
+
+    5. Calcule el promedio de esas puntuaciones.
+
+    6. Devuelva ese promedio como un número flotante (float).
+

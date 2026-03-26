@@ -1,0 +1,17 @@
+Problema 0003: Detección de Multicolinealidad mediante el Número de Condición
+
+Contexto
+En modelos de regresión, la presencia de multicolinealidad (variables predictoras altamente correlacionadas) puede inflar la varianza de los coeficientes y hacer que el modelo sea inestable. Una forma de cuantificar el grado de multicolinealidad es calcular el número de condición de la matriz de correlación. Valores altos (típicamente > 30) indican multicolinealidad severa. Tu tarea es implementar una función que calcule esta métrica.
+
+Tu misión
+Escribe una función en Python, calcular_numero_condicion(df), que realice los siguientes pasos:
+
+1. Seleccione todas las columnas numéricas del DataFrame df.
+
+2. Calcule la matriz de correlación de Pearson de esas columnas usando el método corr() de pandas.
+
+3. Calcule los autovalores de la matriz de correlación mediante numpy.linalg.eigvals.
+
+4. Calcule el número de condición como la raíz cuadrada del cociente entre el autovalor máximo y el autovalor mínimo (en valor absoluto).
+
+5. Devuelva ese número como un flotante (float).

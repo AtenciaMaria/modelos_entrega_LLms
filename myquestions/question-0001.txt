@@ -1,0 +1,16 @@
+Problema 0001: Calibración de Umbral de Decisión por F1-Score
+
+Contexto
+En problemas de clasificación binaria (como detección de enfermedades o spam), el umbral de decisión por defecto es 0.5: si la probabilidad predicha supera ese valor, se clasifica como positivo. Sin embargo, este umbral no siempre es el óptimo. Tu tarea es encontrar el umbral que maximiza el F1-Score sobre los datos de entrenamiento.
+
+Tu misión
+Escribe una función en Python, encontrar_umbral_optimo(X, y, n_umbrales=50, random_state=42), que entrene un modelo de clasificación, evalúe distintos umbrales de decisión y devuelva el umbral óptimo.
+
+Pasos a seguir dentro de la función:
+
+1. Escalar las características X usando StandardScaler de sklearn (fit_transform sobre todo X).
+2. Entrenar un LogisticRegression con los parámetros max_iter=1000 y random_state=random_state usando X escalado e y.
+3. Obtener probabilidades de la clase positiva usando predict_proba sobre X escalado (columna de índice 1).
+4. Generar n_umbrales valores equiespaciados entre 0.01 y 0.99 usando numpy.
+5. Para cada umbral, convertir las probabilidades en etiquetas binarias (positivo si prob >= umbral) y calcular el f1_score de sklearn con zero_division=0.
+6. Devolver el umbral (como float redondeado a 4 decimales) correspondiente al mayor F1-Score encontrado.

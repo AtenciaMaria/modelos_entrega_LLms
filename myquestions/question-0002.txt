@@ -1,0 +1,31 @@
+Problema 0002: Pre-procesamiento y Evaluación de un Modelo de Regresión
+
+Contexto:
+Imagina que trabajas con un conjunto de datos sobre precios de viviendas. Necesitas automatizar un flujo de trabajo que tome un DataFrame, separe las variables, entrene un modelo de Regresión Ridge (que ayuda a evitar el sobreajuste) y devuelva el error cometido por el modelo.
+
+Tu misión:
+Escribe una función en Python que realice los siguientes pasos:
+
+Reciba un DataFrame de pandas y el nombre de la columna que queremos predecir (target).
+
+1. Divida los datos en conjuntos de entrenamiento (80%) y prueba (20%) usando un random_state=42.
+
+2. Escale las características (X) utilizando StandardScaler de sklearn para que todas tengan la misma importancia.
+
+3. Entrene un modelo de Ridge con un parámetro de regularización alpha=1.0.
+
+4. Calcule el Error Absoluto Medio (MAE) en el conjunto de prueba.
+
+Especificaciones de la función:
+
+Nombre de la función: entrenar_evaluar_ridge(df, target_col)
+
+Argumentos:
+
+df: Un objeto pandas.DataFrame.
+
+target_col: Una cadena de texto (str) con el nombre de la columna objetivo.
+
+Retorno:
+
+Un número de tipo punto flotante (float) que represente el MAE obtenido en el set de prueba
