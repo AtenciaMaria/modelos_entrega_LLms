@@ -5,9 +5,6 @@ from sklearn.linear_model import Ridge
 from sklearn.metrics import mean_absolute_error
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import StandardScaler
-import sys
-sys.stdout.reconfigure(encoding='utf-8')
-
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Generador de casos de uso
