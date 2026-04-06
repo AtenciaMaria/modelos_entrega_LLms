@@ -3,9 +3,6 @@ from sklearn.datasets import make_classification
 from sklearn.preprocessing import StandardScaler
 from sklearn.linear_model import LogisticRegression 
 from sklearn.metrics import f1_score  
-import sys
-sys.stdout.reconfigure(encoding='utf-8')
-
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Generador de casos de uso aleatorios
