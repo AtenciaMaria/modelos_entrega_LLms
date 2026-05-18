@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
-import sys
-sys.stdout.reconfigure(encoding='utf-8')
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # Generador de casos de uso

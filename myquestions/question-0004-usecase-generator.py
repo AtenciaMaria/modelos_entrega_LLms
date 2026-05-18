@@ -5,8 +5,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import average_precision_score
 from sklearn.model_selection import cross_val_score, StratifiedKFold
 from sklearn.preprocessing import StandardScaler
-import sys
-sys.stdout.reconfigure(encoding='utf-8')
+
 
 
 
